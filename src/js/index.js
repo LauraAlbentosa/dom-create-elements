@@ -202,10 +202,11 @@ const multiply = () => {
   for (let i = 0; i<=10; i++){
     let newElement = document.createElement('li')
     newElement.textContent = `${number} x ${i}: ${number*i} `
-    console.log(newElement.textContent)
+    //console.log(newElement.textContent)
     fragment.append(newElement)
   }
 
+  listMultiply.textContent = '';
   listMultiply.append(fragment)
 
 };
@@ -275,9 +276,8 @@ const createCard = () =>{
     userNameElement.textContent = user.username
     const emailElement = document.createElement('span')
     emailElement.textContent = user.email
-    const profileImageElement = document.createElement('span')
+    const profileImageElement = document.createElement('img')
     profileImageElement.textContent = user.profileImage
-
     divCard.classList.add('card')
 
     divCard.append(nameElement)
